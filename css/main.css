@@ -102,22 +102,19 @@ textarea {
 /* GENERAL ------------------------------------------ */
 
 body {
-	color: #ACACAC;
+	color: #fff;
 	font-family:'Archivo Narrow', Helvetica, Arial, sans-serif;
-}
-
-nav {
-	display: block;
-	margin: 0;
-	padding: 0;
-    font-size: 2em;
-    color: #FFF;
 }
 
 a:link {color:#fff; text-decoration: none;}     
 a:visited {color:#fff; text-decoration: none;} 
-a:hover {color:#fff; outline: 2px dashed #0000ff; outline-offset: 15px;}  
+a:hover {color:#fff; border-bottom: 2px dashed #0000ff;}  
 a:active {color:#0000ff;text-decoration: none;}
+
+.folio a:hover, .mock-table a:hover {color:#fff; outline: 2px dashed #0000ff; border-bottom: none;}   
+.mock-table a:hover {outline-offset: -15px;}
+.folio a:hover {outline-offset: -32px;}
+
 
 h1 {
 	display: block;
@@ -131,7 +128,6 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     text-shadow: -3px 3px #ff0;
-
 }
 
 h2 {
@@ -144,24 +140,18 @@ h2 {
     text-transform: uppercase;
     line-height:125%;
 	letter-spacing: 2px;
-	border-bottom: 10px solid #FFFF00;   
 }
 
 h3 {
 	display: block;
-	margin: 200px auto -300px auto;
-	font-family: 'Archivo Narrow', sans-serif;
-	font-weight: 400;
+	margin: 150px auto -250px auto;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 500;
     font-size: 3em;
     line-height: 1.1em;
-    color: #fff;
     letter-spacing: 1px;
-    text-transform: none;
-    text-align: left;
-    background-image: url('{{ site.baseurl }}/img/h3-bg.gif');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    z-index: 1000;
+    text-transform: uppercase;
+    text-align: right;
 }
 
 h4 {
@@ -169,7 +159,6 @@ h4 {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.1em;
-    color: #606060;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -201,6 +190,10 @@ li {
 	float: left;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* POSITIONING ------------------------------------------ */
 
 #canvas {
@@ -211,13 +204,14 @@ li {
 
 header, footer {
 	display: block;
-	text-align: left;
+	text-align: center;
 	clear: left;
-	padding: 10px 01.0416667%;
+	padding: 10px auto;
 }
 
 nav {
-	padding-bottom: 60px;	
+	font-size: 2em;
+	margin-bottom: 80px;
 }
 
 footer {
@@ -226,22 +220,23 @@ footer {
 
 .folio {
 	padding: 0;
+	margin: 0;
 	height: auto;
 }
 
-li.one {
-	width: 97.916667%;      /* 940px/960px = .97916667 */
-	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+.mains {
+	display: block;
+	clear: both;
+	width: 98%;      /* 940px/960px = .97916667 */
+	margin: 0 1%;      /* 10px/960px = .010416667 */
+	padding: 0;
+
 }
 
-li.two {
-	width: 47.916667%;      /* 460px/960px = .47916667 */
-	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
-}
-
-li.three {
-	width: 31.25%;      /* 300px/960px = .3125 */
-	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+li.rocks {
+	width: 62%;      /* 940px/960px = .97916667 */
+	margin: 0 19%;      /* 10px/960px = .010416667 */
+	padding: 0;
 }
 
 .folio img {
@@ -271,7 +266,6 @@ li.three {
 /* ADDITIONAL TEXT STYLES ------------------------------------------ */
 
 p.copyright {
-color: #fff;
 font-size: .8em;
 text-align: center;
 }
@@ -292,7 +286,9 @@ text-align: center;
 }
 
 nav ul {
-	margin: 0 28%;
+	margin: 0 auto;
+	padding: 0 28%;
+    text-align: center;
 }
 
 nav li {
@@ -304,25 +300,41 @@ p.date {
 	margin: 3em 0 0 0;
 }
 
-/* BACKGROUND IMAGES ------------------------------------ */
-
-html.full {
-	background: url('{{ site.baseurl }}/img/bg-grass.gif') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+h3.rocks {
+	background-image: url('{{ site.baseurl }}/img/h3-bg.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
 }
 
-html.tiled-1 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
+p.river {
+	display: block;
+	position: absolute;
+	margin-top: 50px;
+	padding: 0 10% 0 30%;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 500;
+    font-size: 3em;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* BACKGROUND IMAGES ------------------------------------ */
+
+html.full {background: url('{{ site.baseurl }}/img/bg-grass.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+html.full-water {background: url('{{ site.baseurl }}/img/bg-water.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+
+html.tiled-1 {background: url('{{ site.baseurl }}/img/bg-rock8.gif');}
 html.tiled-2 {background: url('{{ site.baseurl }}/img/bg-rock2.png');}
 html.full-3 {background: url('{{ site.baseurl }}/img/bg-rock3.gif'); -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain;}
 html.full-4 {background: url('{{ site.baseurl }}/img/bg-rock4.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 html.tiled-5 {background: url('{{ site.baseurl }}/img/bg-rock5.gif');}
 html.full-6 {background: url('{{ site.baseurl }}/img/bg-rock6.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 html.tiled-7 {background: url('{{ site.baseurl }}/img/bg-rock7.gif');}
-
-
+html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
+/* html.full-9 {background: url('{{ site.baseurl }}/img/bg-rock9.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;} */
 
 
 /* TOP IMAGES ------------------------------------ */
@@ -344,14 +356,15 @@ html.tiled-7 {background: url('{{ site.baseurl }}/img/bg-rock7.gif');}
 /* TABLE STUFF ------------------------------------------ */
 
 .mock-table {
-	padding: 0;
+	display: block;
+	-webkit-padding-start: 0;
 	height: auto;
 }
 
-
 li.mock-table {
-	width: 31%;
+	width: 23.6%;
 	margin: 0;
+	padding: 0;
 }
 
 li.firstpos {
@@ -383,9 +396,9 @@ li.fourthpos {
 
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
 	
-	.folio li {
+	.folio li, .folio .mains {
 		float: none;
 		width: 90%;
 		margin: 0 5% 20px;  
@@ -424,25 +437,33 @@ li.fourthpos {
 	
 }
 
+@media only screen  and (min-width : 1824px) {
+	#canvas {
+		margin: 0 auto;
+		padding: 0 0 1em 0;
+		max-width: 90em;      /* 1440px/16px = 90em */
+	}
+	
+	.folio .mains {
+	width: 90%;      /* 940px/960px = .97916667 */
+	margin: 0 5%;      /* 10px/960px = .010416667 */
+	padding: 0;
+	}
+	
+	nav ul {
+	padding: 0 35%;
+	}
+	
+	p.river {margin-top: 100px;}
+}
+
+
 
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
 
 .visuallyhidden {
     border: 0;
