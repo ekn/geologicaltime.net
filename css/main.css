@@ -103,6 +103,7 @@ textarea {
 
 body {
 	color: #fff;
+	font-size: 16px;
 	font-family:'Archivo Narrow', Helvetica, Arial, sans-serif;
 }
 
@@ -111,9 +112,11 @@ a:visited {color:#fff; text-decoration: none;}
 a:hover {color:#fff; border-bottom: 2px dashed #0000ff;}  
 a:active {color:#0000ff;text-decoration: none;}
 
-.folio a:hover, .mock-table a:hover {color:#fff; outline: 2px dashed #0000ff; border-bottom: none;}   
+.rocks a:hover, .mock-table a:hover {color:#fff; outline: 2px dashed #0000ff; border-bottom: none;}   
 .mock-table a:hover {outline-offset: -15px;}
-.folio a:hover {outline-offset: -32px;}
+.mock-table a p {display:none;}
+.mock-table a:hover p {display:block;}
+.rocks a:hover {outline-offset: -32px;}
 
 
 h1 {
@@ -144,14 +147,14 @@ h2 {
 
 h3 {
 	display: block;
-	margin: 150px auto -250px auto;
 	font-family: 'Cormorant Garamond', serif;
 	font-weight: 500;
     font-size: 3em;
     line-height: 1.1em;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-align: right;
+    background-image: url('{{ site.baseurl }}/img/h3-bg.gif');
+    background-repeat: no-repeat;
 }
 
 h4 {
@@ -175,7 +178,7 @@ p, li {
 p {
 	display: block;
 	margin: 0;
-	font-size: 1em;  
+	font-size: 1.2em;  
 	line-height: 1.5em;
 }
 
@@ -206,16 +209,16 @@ header, footer {
 	display: block;
 	text-align: center;
 	clear: left;
-	padding: 10px auto;
+	padding: 10px 01.0416667%;
+}
+
+footer {
+	padding-top: 10em;
 }
 
 nav {
 	font-size: 2em;
 	margin-bottom: 80px;
-}
-
-footer {
-	padding-top: 5em;
 }
 
 .folio {
@@ -230,6 +233,22 @@ footer {
 	width: 98%;      /* 940px/960px = .97916667 */
 	margin: 0 1%;      /* 10px/960px = .010416667 */
 	padding: 0;
+
+}
+
+.mains-2 {
+	display: block;
+	float: left;
+	width: 47.916667%;      /* 460px/960px = .47916667 */
+	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+}
+
+.text-container {
+	display: block;
+	clear: both;
+	width: 70%;      /* 940px/960px = .97916667 */
+	margin: 0 30% 0 0;      /* 10px/960px = .010416667 */
+	padding: 10px 0 0 0;
 
 }
 
@@ -266,8 +285,8 @@ li.rocks {
 /* ADDITIONAL TEXT STYLES ------------------------------------------ */
 
 p.copyright {
-font-size: .8em;
-text-align: center;
+	width: 100%;
+	font-size: .8em;
 }
 
 .slide-caption {
@@ -301,9 +320,14 @@ p.date {
 }
 
 h3.rocks {
-	background-image: url('{{ site.baseurl }}/img/h3-bg.gif');
-    background-repeat: no-repeat;
-    background-position: right top;
+	margin: 150px auto -250px auto;
+	text-align: right;
+	background-position: right top;
+}
+
+h3.faq {
+	text-align: left;
+    background-position: left top;
 }
 
 p.river {
@@ -319,16 +343,30 @@ p.river {
     text-align: right;
 }
 
+.text-container li {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 1.5em;
+    list-style: disc;
+    display: list-item;
+    float: none;
+}
+
 /* BACKGROUND IMAGES ------------------------------------ */
 
 html.full {background: url('{{ site.baseurl }}/img/bg-grass.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
 html.full-water {background: url('{{ site.baseurl }}/img/bg-water.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
+html.full-forest {background: url('{{ site.baseurl }}/img/bg-leaves.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+html.faq {background: url('{{ site.baseurl }}/img/bg-faq.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+
 
 html.tiled-1 {background: url('{{ site.baseurl }}/img/bg-rock8.gif');}
 html.tiled-2 {background: url('{{ site.baseurl }}/img/bg-rock2.png');}
-html.full-3 {background: url('{{ site.baseurl }}/img/bg-rock3.gif'); -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain;}
+html.full-3 {background: url('{{ site.baseurl }}/img/bg-rock3.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 html.full-4 {background: url('{{ site.baseurl }}/img/bg-rock4.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 html.tiled-5 {background: url('{{ site.baseurl }}/img/bg-rock5.gif');}
 html.full-6 {background: url('{{ site.baseurl }}/img/bg-rock6.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
@@ -349,9 +387,20 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
     z-index: 100;
 }
 
-.transparent {
-	opacity: .7;
+.tl-arc {
+	position: absolute;
+    top: 250px;
+    width: 100%;
+    border: none;
 }
+
+.zindex {z-index: -100;}
+
+.transparent {opacity: .7;}
+.transparent-2 {opacity: .6;}
+
+
+
 
 /* TABLE STUFF ------------------------------------------ */
 
@@ -398,7 +447,7 @@ li.fourthpos {
 
 @media only screen and (max-width: 700px) {
 	
-	.folio li, .folio .mains {
+	.folio .mains {
 		float: none;
 		width: 90%;
 		margin: 0 5% 20px;  
@@ -435,9 +484,28 @@ li.fourthpos {
     line-height: 1.3em;
 	}
 	
+	li.mock-table {
+	border: none;
+	}
+	
 }
 
-@media only screen  and (min-width : 1824px) {
+
+
+@media only screen and (max-width: 850px) {
+	
+	li.mock-table {
+	border: none;
+	}
+	
+}
+
+
+
+
+
+
+@media only screen and (min-width : 1824px) {
 	#canvas {
 		margin: 0 auto;
 		padding: 0 0 1em 0;
