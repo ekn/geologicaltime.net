@@ -397,6 +397,7 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
 
 .transparent {opacity: .7;}
 .transparent-2 {opacity: .6;}
+.transparent-3 {opacity: .3}
 
 
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
