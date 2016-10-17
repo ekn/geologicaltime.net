@@ -357,6 +357,7 @@ p.woods {
     line-height: 1.1em;
     text-transform: uppercase;
     text-align: center;
+    opacity: .8;
 }
 
 .text-container li {
@@ -487,9 +488,9 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
 		margin-left: -800px;
 	}
 
-p.river-left {
-	width: 1600px;
-	margin-left: -800px;
+	p.river-left {
+		width: 1600px;
+		margin-left: -800px;
 	}
 }
 
