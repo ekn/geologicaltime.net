@@ -288,7 +288,7 @@ li.fourthpos {
 
 /* ADDITIONAL TEXT STYLES ------------------------------------------ */
 
-p.copyright {
+.copyright {
 	width: 100%;
 	font-size: .8em;
 }
@@ -422,7 +422,7 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
 	
 	h1 {font-size: 2.5em;}
 	
@@ -441,15 +441,50 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
 	header, footer {
 		width: 90%;
 		margin: 0 5%;
-		padding: 10px 0;
 	}
 	
+	header {padding: 10px 0;}
+		
 	nav {
-    font-size: 1.2em;
+    font-size: 1.8em;
     line-height: 1.3em;
 	}
+	
+	h3.faq {margin: .8em auto;}
+	
+	p.river-right {
+		width: 374px;
+		top: 50%;
+		margin-left: -187px;
+    	font-size: 1.5em;
+		}
+
+	p.river-left {
+		width: 374;
+		top: 60%;
+		margin-left: -187px;
+		font-size: 1.5em;
+		}
 		
+	p.woods {
+	position: fixed;
+	width: 320px;
+	top: 50%;
+	margin-left: -160px;
+    font-size: 1.5em;
+	}
+
 }
+
+@media only screen and (max-width: 800px) {
+				
+		.mock-table li {
+			float: none;
+			width: 90%;
+			margin: 0 5%;
+		}
+}
+
 
 @media only screen and (max-width: 960px) { 
 	
@@ -466,8 +501,6 @@ html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
 		width: 50%;
 	}
 }
-
-*/
 
 @media only screen and (min-width : 1824px) {
 	
