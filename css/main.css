@@ -108,6 +108,14 @@ body {
 	font-weight: 500;
 }
 
+.roto {
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 a:link {color:#fff; text-decoration: none;}     
 a:visited {color:#fff; text-decoration: none;} 
 a:hover {color:#fff; border-bottom: 2px dashed #0000ff;}  
