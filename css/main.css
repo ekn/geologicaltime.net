@@ -147,7 +147,7 @@ h3 {
     line-height: 1.1em;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background-image: url('{{ site.baseurl }}/img/h3-bg.gif');
+    background-image: url('/img/h3-bg.gif');
     background-repeat: no-repeat;
 }
 
@@ -372,26 +372,26 @@ p.woods {
 
 /* BACKGROUND IMAGES ------------------------------------ */
 
-html.full {background: url('{{ site.baseurl }}/img/bg-grass.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.full {background: url('/img/bg-grass.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
-html.full-water {background: url('{{ site.baseurl }}/img/bg-water.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.full-water {background: url('/img/bg-water.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
-html.full-forest {background: url('{{ site.baseurl }}/img/bg-leaves.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.full-forest {background: url('/img/bg-leaves.gif') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
-html.full-moss {background: url('{{ site.baseurl }}/img/bg-woods.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.full-moss {background: url('/img/bg-woods.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
-html.faq {background: url('{{ site.baseurl }}/img/bg-faq.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.faq {background: url('/img/bg-faq.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
 
-html.tiled-1 {background: url('{{ site.baseurl }}/img/bg-rock8.gif');}
-html.tiled-2 {background: url('{{ site.baseurl }}/img/bg-rock2.png');}
-html.full-3 {background: url('{{ site.baseurl }}/img/bg-rock3.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
-html.full-4 {background: url('{{ site.baseurl }}/img/bg-rock4.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
-html.tiled-5 {background: url('{{ site.baseurl }}/img/bg-rock5.gif');}
-html.full-6 {background: url('{{ site.baseurl }}/img/bg-rock6.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
-html.tiled-7 {background: url('{{ site.baseurl }}/img/bg-rock7.gif');}
-html.tiled-8 {background: url('{{ site.baseurl }}/img/bg-rock1.gif');}
-/* html.full-9 {background: url('{{ site.baseurl }}/img/bg-rock9.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;} */
+html.tiled-1 {background: url('/img/bg-rock8.gif');}
+html.tiled-2 {background: url('/img/bg-rock2.png');}
+html.full-3 {background: url('/img/bg-rock3.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.full-4 {background: url('/img/bg-rock4.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.tiled-5 {background: url('/img/bg-rock5.gif');}
+html.full-6 {background: url('/img/bg-rock6.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html.tiled-7 {background: url('/img/bg-rock7.gif');}
+html.tiled-8 {background: url('/img/bg-rock1.gif');}
+/* html.full-9 {background: url('/img/bg-rock9.gif'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;} */
 
 
 /* TOP IMAGES ------------------------------------ */
